@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #0F1226;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2F55 transparent;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+.star {
+  animation: twinkle 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star { animation: none; opacity: 0.8; }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #E8B95C;
+  outline-offset: 2px;
+}
